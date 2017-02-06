@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.rockBox, .paperBox, .scissorsBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  height: 300px;
+  border: solid 2px black;
+  margin: 15px;
+  cursor: pointer;
+
+}
+
+.title {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.scoreboard-you, .scoreboard-comp {
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 0 30px;
+}
+span {
+  color: red;
+}
+
+#ref {
+  text-align: center;
+
+}
+.start {
+  cursor: pointer;
+  color: blue;
+
+}
+.countdownbox {
+  text-align: center;
+  margin-top: -10px;
+}
+span {
+  font-size: 30px;
+}
