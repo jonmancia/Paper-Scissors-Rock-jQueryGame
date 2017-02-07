@@ -12,7 +12,7 @@ var result;
 // Scoreboard
 $('#you-score').text(userScore);
 $('#comp-score').text(compScore);
-
+	
 // Computer's Turn
 var rand = function(){
 		var randomNum = Math.floor(Math.random()*3+1);
@@ -28,15 +28,18 @@ var rand = function(){
           return result;
       };
 
+
+
 alert('Ready for a game? Click OK to start!')
 
 
 // Select All Options(Rock, Paper or Scissors)
 $('.rockBox').click( function(){
+	var random = rand();
 	alert('You selected Rock!');
-	alert('The computer selected ' + rand());
+	alert('The computer selected ' + random);
 
-	if (rand() == rock){
+	if (random == rock){
 		alert("It's a tie, try again!");
 		if (userScore || compScore === winningScore){
 			if (userScore === winningScore){
@@ -58,7 +61,7 @@ $('.rockBox').click( function(){
 			}
 		}
 	}
-	else if (rand() == paper){
+	else if (random == paper){
 		alert("You loose! Try again!");
 		compScore++;
 		$('#comp-score').text(compScore);
@@ -106,13 +109,15 @@ $('.rockBox').click( function(){
 			}
 		}
 }
+
 });
 
 $('.paperBox').click( function(){
+	var random = rand();
 	alert('You selected Paper!');
-	alert('The computer selected ' + rand());
+	alert('The computer selected ' + random);
 
-	if (rand() == paper){
+	if (random == paper){
 		alert("It's a tie! Try again!");
 		if (userScore || compScore === winningScore){
 			if (userScore === winningScore){
@@ -134,7 +139,7 @@ $('.paperBox').click( function(){
 			}
 		}
 	}
-	else if (rand() == scissors){
+	else if (random == scissors){
 		alert("You lost this time, try again");
 		compScore++;
 		$('#you-score').text(userScore);
@@ -186,10 +191,11 @@ $('.paperBox').click( function(){
 });
 
 $('.scissorsBox').click( function(){
+	var random = rand();
 	alert('You selected Scissors!');
-	alert('The computer selected ' + rand());
+	alert('The computer selected ' + random);
 
-	if (rand() == rock){
+	if (random == rock){
 		alert("You lost this time! Try again!");
 		compScore++;
 		$('#you-score').text(userScore);
@@ -214,7 +220,7 @@ $('.scissorsBox').click( function(){
 			}
 		}
 	}
-	else if (rand() == paper){
+	else if (random == paper){
 		alert("You won!");
 		userScore++;
 		$('#you-score').text(userScore);
@@ -240,7 +246,7 @@ $('.scissorsBox').click( function(){
 		}
 	}
 	else {
-		if (rand() == scissors){
+		if (random == scissors){
 		alert("It's a tie! Try again");
 		$('#you-score').text(userScore);
 		$('#comp-score').text(compScore);
